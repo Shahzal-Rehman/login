@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- CSS styles -->
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <p id="error-message" style="color: red; text-align: center; display: none;">Invalid username or password!</p>
+    </div>
+
+    <!-- JavaScript code -->
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve username and password
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Replace with your actual username and password
+            var validUsername = 'sr';
+            var validPassword = 'sr';
+
+            // Validate the username and password
+            if (username === validUsername && password === validPassword) {
+                // Redirect to home page
+                window.location.href = 'https://mlsapro.com/home';
+            } else {
+                // Display error message
+                document.getElementById('error-message').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
